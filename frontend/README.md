@@ -75,6 +75,7 @@ Imports use aliases instead of relative paths, configured in `vite.config.ts` an
 | `@`           | `src/`            |
 | `@lib`        | `src/lib/`        |
 | `@components` | `src/components/` |
+| `@features`   | `src/features/`   |
 | `@pages`      | `src/pages/`      |
 | `@providers`  | `src/providers/`  |
 | `@router`     | `src/router/`     |
@@ -82,6 +83,7 @@ Imports use aliases instead of relative paths, configured in `vite.config.ts` an
 | `@assets`     | `src/assets/`     |
 | `@icons`      | `src/assets/icons/` |
 | `@images`     | `src/assets/images/` |
+| `@store`      | `src/store/`      |
 
 ```ts
 import { Button } from '@components/Button'
@@ -90,8 +92,6 @@ import { Button } from '@components/Button'
 #### Adding a new alias
 
 When adding a new top-level folder under `src/`, register it in **both** `vite.config.ts` and `tsconfig.app.json` files, then restart the dev server / TS server.
-
-
 
 
 ## Setup
@@ -116,6 +116,15 @@ npm run dev
 
 The app will be available at `http://localhost:5173` by default.
 
+## Mock users:
+
+| Username             | Password      |
+|----------------------|---------------|
+| `test@example.com`   | password123   |
+| `admin@example.com`  | admin123      |
+
+You can find this implementation in [authService.ts](frontend/src/features/auth/services/authService.ts)
+
 ## Available Scripts
 
 | Command        | Description                        |
@@ -124,3 +133,14 @@ The app will be available at `http://localhost:5173` by default.
 | `npm run build`| Type-check and build for production|
 | `npm run lint` | Run ESLint                         |
 | `npm run preview` | Preview production build locally |
+
+
+## Agents
+There is also a CLAUDE.md file. Claude will pick up this automatically. <br>
+If you're using a different AI coding tool, it likely won't pick up this by default. Please check what your AI tool uses.
+
+- **Gemini CLI** — add this to `.gemini/settings.json`:
+```json
+  { "context": { "fileName": ["CLAUDE.md", "GEMINI.md"] } }
+```
+- **Other tools** (Codex, Cursor, etc.) — check whether they support pointing at a custom context filename, or copy the relevant sections into the tool's expected file.

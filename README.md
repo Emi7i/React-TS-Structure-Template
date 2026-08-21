@@ -1,4 +1,8 @@
-# Frontend Template
+# Frontend
+
+<img alt="dashboard.png" height="320" src="assets/dashboard.png" width="550"/>
+<img alt="login_screen.png" height="320" src="assets/login_page.png" width="550"/>
+
 
 A React + TypeScript + Vite frontend template.
 
@@ -70,15 +74,20 @@ frontend/
 
 Imports use aliases instead of relative paths, configured in `vite.config.ts` and `tsconfig.app.json`.
 
-| Alias          | Points to           |
-|----------------|----------------------|
-| `@`            | `src/`               |
-| `@lib`         | `src/lib/`           |
-| `@components`  | `src/components/`    |
-| `@pages`       | `src/pages/`         |
-| `@providers`   | `src/providers/`     |
-| `@router`      | `src/router/`        |
-| `@constants`   | `src/constants/`     |
+| Alias         | Points to         |
+|---------------|-------------------|
+| `@`           | `src/`            |
+| `@lib`        | `src/lib/`        |
+| `@components` | `src/components/` |
+| `@features`   | `src/features/`   |
+| `@pages`      | `src/pages/`      |
+| `@providers`  | `src/providers/`  |
+| `@router`     | `src/router/`     |
+| `@constants`  | `src/constants/`  |
+| `@assets`     | `src/assets/`     |
+| `@icons`      | `src/assets/icons/` |
+| `@images`     | `src/assets/images/` |
+| `@store`      | `src/store/`      |
 
 ```ts
 import { Button } from '@components/Button'
@@ -110,6 +119,15 @@ npm run dev
 ```
 
 The app will be available at `http://localhost:5173` by default.
+
+## Mock users:
+
+| Username             | Password      |
+|----------------------|---------------|
+| `test@example.com`   | password123   |
+| `admin@example.com`  | admin123      |
+
+You can find this implementation in [authService.ts](frontend/src/features/auth/services/authService.ts)
 
 ## Available Scripts
 

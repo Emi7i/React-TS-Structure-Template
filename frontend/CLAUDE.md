@@ -31,6 +31,9 @@
 | `@features` | `src/features/` |
 | `@components` | `src/components/` |
 | `@pages` | `src/pages/` |
+| `@providers` | `src/providers/` |
+| `@router` | `src/router/` |
+| `@constants` | `src/constants/` |
 | `@store` | `src/store/` |
 | `@lib` | `src/lib/` |
 | `@security` | `src/security/` |

@@ -26,13 +26,15 @@
       "@/*": ["./src/*"],
       "@lib/*": ["./src/lib/*"],
       "@components/*": ["./src/components/*"],
+      "@features/*": ["./src/features/*"],
       "@pages/*": ["./src/pages/*"],
       "@providers/*": ["./src/providers/*"],
       "@router/*": ["./src/router/*"],
       "@constants/*": ["./src/constants/*"],
       "@assets/*": ["./src/assets/*"],
       "@icons/*": ["./src/assets/icons/*"],
-      "@images/*": ["./src/assets/images/*"]
+      "@images/*": ["./src/assets/images/*"],
+      "@store/*": ["./src/store/*"]
     }
   },
   "include": ["src"]
